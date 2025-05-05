@@ -19,17 +19,18 @@
 
 /* Modo oscuro */
 [data-theme="dark"] {
-    --color-primary: #29abe2; /* Mantenemos el azul claro */
-    --color-secondary: #ffffff; /* Blanco */
-    --color-background: #121212; /* Gris muy oscuro */
-    --color-text: #ffffff; /* Blanco */
-    --color-gray-light: #2a2a2a;
-    --color-gray: #3a3a3a;
-    --color-gray-dark: #aaaaaa;
-    --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --color-primary: #66c7ff; /* Azul más brillante */
+    --color-secondary: #ffffff; /* Blanco puro */
+    --color-background: #121212; /* Fondo oscuro */
+    --color-text: #ffffff; /* Texto blanco */
+    --color-gray-light: #3a3a3a; /* Gris algo más claro */
+    --color-gray: #555555; /* Gris medio */
+    --color-gray-dark: #e0e0e0; /* Gris claro para mejor contraste */
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     --header-bg: rgba(18, 18, 18, 0.95);
-    --card-bg: #1e1e1e;
+    --card-bg: #1e1e1e; /* Fondo de tarjetas ligeramente más claro que el fondo principal */
     --footer-bg: #1a1a1a;
+    --tool-card-text: #f0f0f0; /* Color específico para texto en las tarjetas */
 }
 
 /* Reset y estilos base */
@@ -148,6 +149,16 @@ img {
 .btn-outline:hover {
     background-color: var(--color-primary);
     color: white;
+}
+
+[data-theme="dark"] .btn-outline {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background-color: var(--color-primary);
+    color: #111111; /* Texto oscuro para mejor contraste al hacer hover */
 }
 
 .btn-sm {
@@ -515,6 +526,10 @@ footer {
     padding: 3rem 0;
 }
 
+[data-theme="dark"] footer {
+    background-color: #111111; /* Más oscuro que el fondo principal */
+}
+
 .footer-content {
     display: flex;
     flex-direction: column;
@@ -537,6 +552,10 @@ footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
+[data-theme="dark"] .footer-text {
+    color: rgba(255, 255, 255, 0.9); /* Más brillante para mejor contraste */
+}
+
 .footer-links {
     display: flex;
     gap: 1.5rem;
@@ -548,8 +567,16 @@ footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
+[data-theme="dark"] .footer-links a {
+    color: rgba(255, 255, 255, 0.9); /* Más brillante para mejor contraste */
+}
+
 .footer-links a:hover {
     color: var(--color-primary);
+}
+
+[data-theme="dark"] .footer-links a:hover {
+    color: var(--color-primary); /* Mantiene el color primario en hover */
 }
 
 /* Sobre Mí */
@@ -648,6 +675,7 @@ footer {
     color: var(--color-secondary);
     position: relative;
     padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-primary);
 }
 
 .tools-category h3::after {
@@ -680,6 +708,11 @@ footer {
     text-align: center;
 }
 
+[data-theme="dark"] .tool-card {
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+}
+
 .tool-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -707,9 +740,21 @@ footer {
     color: var(--color-secondary);
 }
 
+[data-theme="dark"] .tool-card h4 {
+    color: var(--color-primary);
+}
+
 .tool-card p {
     color: var(--color-gray-dark);
     font-size: 0.9rem;
+}
+
+[data-theme="dark"] .tool-card p {
+    color: var(--tool-card-text);
+}
+
+[data-theme="dark"] .tools-intro p {
+    color: var(--tool-card-text);
 }
 
 /* Proyectos */
