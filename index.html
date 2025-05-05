@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Educador en Diseño y Desarrollo Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">Portfolio<span>Web</span></div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="sobre-mi.html" class="nav-link">Sobre Mí</a></li>
+                    <li class="nav-item"><a href="herramientas.html" class="nav-link">Herramientas</a></li>
+                    <li class="nav-item"><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+                    <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li class="nav-item">
+                        <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Formando a los Próximos Creadores Web</h1>
+                    <p class="hero-subtitle">Educador apasionado por el diseño y desarrollo web, comprometido con la formación de la próxima generación de profesionales digitales.</p>
+                    <div class="hero-cta">
+                        <a href="sobre-mi.html" class="btn btn-primary"><i class="fas fa-user"></i> Sobre Mí</a>
+                        <a href="proyectos.html" class="btn btn-secondary"><i class="fas fa-laptop-code"></i> Proyectos</a>
+                        <a href="#contacto" class="btn btn-outline"><i class="fas fa-envelope"></i> Contacto</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder para imagen/animación -->
+                    <div class="placeholder-image">
+                        <img src="images/hero01.jpg" alt="Impartiendo classes">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Introducción -->
+        <section class="intro">
+            <div class="container">
+                <h2 class="section-title">Bienvenido a mi Espacio Digital</h2>
+                <div class="intro-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
+                    <p>Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Destacados -->
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-title">Áreas de Especialización</h2>
+                <div class="featured-grid">
+                    <div class="featured-card">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Desarrollo Web</h3>
+                        <p>HTML5, CSS3, JavaScript y frameworks modernos para crear experiencias web excepcionales.</p>
+                    </div>
+                    <div class="featured-card">
+                        <div class="card-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Diseño UI/UX</h3>
+                        <p>Interfaces intuitivas y experiencias de usuario centradas en las necesidades del público objetivo.</p>
+                    </div>
+                    <div class="featured-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Educación Tecnológica</h3>
+                        <p>Metodologías innovadoras para la enseñanza de tecnologías web y diseño digital.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>¿Hablamos?</h3>
+                        <p>Si estás interesado en colaborar, tienes alguna pregunta o simplemente quieres saludar, no dudes en contactarme.</p>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-envelope"></i> correo@ejemplo.com</li>
+                            <li><i class="fas fa-phone"></i> +34 600 000 000</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Almería, España</li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón Ir Arriba -->
+    <button id="scrollTop" class="scroll-top" aria-label="Ir arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Portfolio<span>Web</span></div>
+                <p class="footer-text">© 2023 Todos los derechos reservados</p>
+                <div class="footer-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="sobre-mi.html">Sobre Mí</a>
+                    <a href="herramientas.html">Herramientas</a>
+                    <a href="proyectos.html">Proyectos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <a href="cv.pdf" class="btn btn-outline btn-sm">Descargar CV</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
