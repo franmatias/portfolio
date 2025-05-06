@@ -140,6 +140,17 @@ img {
     color: white;
 }
 
+/* Añadir regla para el modo oscuro */
+[data-theme="dark"] .btn-secondary {
+    background-color: #66c7ff; /* Mismo color que --color-primary en modo oscuro */
+    color: #121212; /* Color oscuro para mejor contraste con fondo claro */
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background-color: #a0dbff; /* Versión más clara al pasar el ratón */
+    color: #000000;
+}
+
 .btn-outline {
     background-color: transparent;
     color: var(--color-primary);
