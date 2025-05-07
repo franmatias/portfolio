@@ -1,8 +1,17 @@
-# Portafolio Digital
+# Portafolio Digital - Educador en Diseño y Desarrollo Web
 
 ## Resumen del Proyecto
 
-Este repositorio contiene mi portafolio digital profesional desarrollado como parte de las clases en el IES Cura Valera. El objetivo de este proyecto es facilitar una plantilla de ejemplo de portafolio para que los alumnos comprendan como realizar el suyo propio y mostrar en él sus habilidades, proyectos y experiencia en el campo del desarrollo de software.
+Este repositorio contiene mi portafolio digital profesional desarrollado como parte de las clases en el IES Cura Valera. El objetivo de este proyecto es facilitar una plantilla de ejemplo de portafolio para que los alumnos comprendan cómo realizar el suyo propio y mostrar en él sus habilidades, proyectos y experiencia en el campo del desarrollo de software.
+
+El portafolio está diseñado con un enfoque moderno y profesional, incluyendo características como:
+
+- Diseño totalmente responsive para todos los dispositivos
+- Soporte para modo oscuro y claro
+- Animaciones y transiciones suaves
+- Estructura modular para facilitar modificaciones
+
+## Estructura del Proyecto
 
 ### Contenido
 
