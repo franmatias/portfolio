@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae - Francisco [Apellidos]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Fuente Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #e2e8f0; /* Fondo ligeramente azulado/grisáceo */
+            padding: 20px;
+        }
+        /* Estilos para el contenedor principal */
+        .container {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Sombra más pronunciada */
+            border: 1px solid #cbd5e0; /* Borde sutil */
+        }
+        /* Estilos para los títulos de sección */
+        h2 {
+            color: #1a202c; /* Color más oscuro para los títulos */
+            border-bottom-color: #63b3ed; /* Color azul más visible para el borde inferior */
+        }
+        /* Estilos para los subtítulos (puestos de trabajo, formación) */
+        h3 {
+             color: #2d3748; /* Color para subtítulos */
+        }
+         /* Estilos para los nombres de empresa/institución */
+        .italic {
+            color: #718096; /* Color para el texto en cursiva */
+        }
+        /* Estilos para las listas (viñetas) */
+        ul {
+            list-style-type: "→ "; /* Cambia la viñeta por una flecha */
+            padding-left: 1.5em; /* Ajusta el padding para la nueva viñeta */
+        }
+        ul li {
+            margin-bottom: 0.5em; /* Espacio entre items de lista */
+             padding-left: 0.2em; /* Espacio entre la viñeta y el texto */
+        }
+         ul.list-disc li {
+             list-style-type: disc; /* Mantener disco para listas específicas si es necesario */
+             padding-left: 0;
+             margin-bottom: 0.25em;
+         }
+        /* Estilos para los enlaces */
+        a {
+            color: #3182ce; /* Color azul para enlaces */
+            text-decoration: none; /* Sin subrayado por defecto */
+        }
+        a:hover {
+            text-decoration: underline; /* Subrayado al pasar el ratón */
+        }
+
+        /* Estilos para los iconos */
+        .icon {
+            margin-right: 8px; /* Espacio a la derecha del icono */
+            color: #4299e1; /* Color azul para los iconos */
+        }
+
+         /* Estilos específicos para las cajas de especialización */
+        .specialization-box {
+            border: 1px solid #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background-color: #f7fafc; /* Fondo muy claro */
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .specialization-box:hover {
+            transform: translateY(-5px); /* Efecto hover sutil */
+        }
+
+        .specialization-box h3 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            color: #2b6cb0; /* Color azul para los títulos de especialización */
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 600; /* font-semibold */
+        }
+
+         .specialization-box ul {
+             list-style-type: disc; /* Viñetas de disco dentro de las cajas */
+             padding-left: 1.2em;
+             margin-top: 0.5rem;
+         }
+         .specialization-box ul li {
+             margin-bottom: 0.25em;
+             padding-left: 0;
+         }
+
+
+        /* Estilos para la impresión */
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+                font-size: 10pt; /* Ajustar tamaño de fuente para impresión */
+            }
+            .container {
+                box-shadow: none;
+                margin: 0 auto;
+                padding: 0;
+                border-radius: 0;
+                border: none;
+            }
+             h1, h2, h3 {
+                color: #000 !important; /* Asegurar color negro en impresión */
+            }
+            a {
+                color: #000 !important; /* Asegurar color negro en impresión */
+                text-decoration: none !important;
+            }
+            a::after {
+                content: " (" attr(href) ")";
+                font-size: 90%;
+                word-break: break-all; /* Evitar que las URLs largas rompan el diseño */
+            }
+            ul {
+                list-style-type: disc !important; /* Volver a disco en impresión para compatibilidad */
+                padding-left: 1.2em !important;
+            }
+             ul li {
+                 margin-bottom: 0.2em !important;
+                 padding-left: 0 !important;
+             }
+             /* Ocultar iconos en impresión si no se desea */
+             .icon {
+                 display: none;
+             }
+             /* Asegurar que las cajas de especialización no tengan sombra ni fondo en impresión */
+             .specialization-box {
+                 border: 1px solid #ccc; /* Borde más discreto en impresión */
+                 box-shadow: none;
+                 background-color: #fff;
+                 padding: 1rem; /* Menos padding en impresión */
+             }
+              .specialization-box:hover {
+                transform: none; /* Sin efecto hover en impresión */
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto bg-white p-8 shadow-lg rounded-lg max-w-4xl">
+
+        <header class="mb-8 pb-4 border-b border-gray-300">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">Francisco [Tus Apellidos]</h1>
+            <p class="text-xl text-gray-600 mb-4">Educador y Profesional del Desarrollo Web</p>
+            <div class="flex flex-wrap gap-4 text-gray-700 text-sm">
+                <span><i class="fas fa-map-marker-alt icon"></i><strong class="font-semibold">Ubicación:</strong> Almería, España</span>
+                <span><i class="fas fa-envelope icon"></i><strong class="font-semibold">Email:</strong> <a href="mailto:correo@ejemplo.com" class="text-blue-600 hover:underline">correo@ejemplo.com</a></span>
+                <span><i class="fas fa-phone icon"></i><strong class="font-semibold">Teléfono:</strong> +34 600 000 000</span>
+                <span><i class="fab fa-linkedin icon"></i><strong class="font-semibold">LinkedIn:</strong> <a href="[Enlace a LinkedIn]" class="text-blue-600 hover:underline">[Tu Usuario LinkedIn]</a></span>
+                <span><i class="fab fa-github icon"></i><strong class="font-semibold">GitHub:</strong> <a href="[Enlace a GitHub]" class="text-blue-600 hover:underline">[Tu Usuario GitHub]</a></span>
+                <span><i class="fab fa-twitter icon"></i><strong class="font-semibold">Twitter:</strong> <a href="[Enlace a Twitter]" class="text-blue-600 hover:underline">[Tu Usuario Twitter]</a></span>
+            </div>
+        </header>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 pb-2 border-b"><i class="fas fa-user icon"></i> Perfil Profesional</h2>
+            <p class="text-gray-700">
+                Educador con amplia experiencia en Diseño y Desarrollo Web, dedicado a formar a la próxima generación de profesionales digitales. Mi enfoque se centra en guiar a los estudiantes a través del ciclo de vida completo del producto, desde la detección de necesidades hasta la implementación de MVPs funcionales, aplicando metodologías ágiles. Combino mi pasión por la enseñanza con una sólida base técnica y experiencia práctica en desarrollo y gestión de proyectos web.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 pb-2 border-b"><i class="fas fa-briefcase icon"></i> Experiencia Profesional</h2>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold">Profesor de Informática | <span class="font-normal text-gray-600">2006 - Presente</span></h3>
+                <p class="italic mb-2">Junta de Andalucía - IES Cura Valera</p>
+                <ul class="text-gray-700">
+                    <li>Docente de educación secundaria (PES) especializado en ciclos formativos de informática.</li>
+                    <li>Diseño e impartición de currículos en desarrollo web, programación, y sistemas.</li>
+                    <li>Implementación de metodologías activas y proyectos prácticos orientados al mundo real.</li>
+                    <li>Integración de tecnologías emergentes y tendencias del sector en la enseñanza.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold">Diseñador Web UI/UX | <span class="font-normal text-gray-600">2007 - 2020</span></h3>
+                <p class="italic mb-2">Empresa Tecnológica</p>
+                <ul class="text-gray-700">
+                    <li>Diseño y desarrollo de interfaces y experiencias de usuario centradas en accesibilidad y usabilidad.</li>
+                    <li>Experiencia en plataformas como Joomla, WordPress, Moodle y LimeSurvey.</li>
+                    <li>Colaboración en equipos multidisciplinares para la entrega de soluciones web completas.</li>
+                    <li>Optimización de la experiencia digital basada en análisis y feedback.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold">Administrador de Sistemas - Gestión de Proyectos Web | <span class="font-normal text-gray-600">2006 - 2012</span></h3>
+                <p class="italic mb-2">Vicerrectorado de Relaciones Internacionales - UGR</p>
+                <ul class="text-gray-700">
+                    <li>Gestión técnica y soporte institucional para infraestructura web.</li>
+                    <li>Coordinación y ejecución de proyectos web institucionales.</li>
+                    <li>Administración de servidores, asegurando disponibilidad y seguridad.</li>
+                    <li>Soporte técnico a usuarios y equipos.</li>
+                </ul>
+            </div>
+
+             <div class="mb-6">
+                <h3 class="text-xl font-semibold">Desarrollador Frontend | <span class="font-normal text-gray-600">2005 - 2006</span></h3>
+                <p class="italic mb-2">[Nombre de la Organización/Proyecto, si aplica]</p>
+                <ul class="text-gray-700">
+                    <li>Desarrollo de formulario avanzado para la gestión y visualización de Tesis Personales en Moodle.</li>
+                    <li>Implementación de mejoras en la interfaz de usuario y la gestión de información académica.</li>
+                    <li>Desarrollo de soluciones frontend personalizadas.</li>
+                </ul>
+            </div>
+
+            <div class="mb-0">
+                <h3 class="text-xl font-semibold">Administrador de Sistemas - Soporte Técnico | <span class="font-normal text-gray-600">2004 - 2005</span></h3>
+                <p class="italic mb-2">Empresa privada</p>
+                <ul class="text-gray-700">
+                    <li>Soporte técnico general y administración de sistemas informáticos.</li>
+                    <li>Foco en seguridad informática y prevención de amenazas.</li>
+                    <li>Participación activa en formación interna y conferencias sobre ciberseguridad.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 pb-2 border-b"><i class="fas fa-code icon"></i> Áreas de Especialización</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="specialization-box">
+                    <h3 class="font-semibold"><i class="fas fa-laptop-code icon"></i> Desarrollo Web Full-Stack</h3>
+                    <ul class="text-gray-700">
+                        <li>Frontend (HTML, CSS, JavaScript, Frameworks)</li>
+                        <li>Backend (Node.js)</li>
+                        <li>Integración de APIs y servicios web</li>
+                    </ul>
+                </div>
+
+                <div class="specialization-box">
+                    <h3 class="font-semibold"><i class="fas fa-paint-brush icon"></i> Diseño UI/UX</h3>
+                    <ul class="text-gray-700">
+                        <li>Interfaces intuitivas y accesibles</li>
+                        <li>Experiencias de usuario centradas en necesidades</li>
+                        <li>Prototipado y wireframing</li>
+                        <li>Evaluación de usabilidad</li>
+                    </ul>
+                </div>
+
+                <div class="specialization-box">
+                    <h3 class="font-semibold"><i class="fas fa-chalkboard-teacher icon"></i> Pedagogía Tecnológica</h3>
+                    <ul class="text-gray-700">
+                        <li>Metodologías innovadoras para la enseñanza</li>
+                        <li>Diseño instruccional para tecnologías web</li>
+                        <li>Evaluación por competencias</li>
+                        <li>Aprendizaje basado en proyectos</li>
+                    </ul>
+                </div>
+
+                <div class="specialization-box">
+                     <h3 class="font-semibold"><i class="fas fa-project-diagram icon"></i> Gestión de Proyectos</h3>
+                    <ul class="text-gray-700">
+                        <li>Metodologías ágiles (Scrum, Kanban)</li>
+                        <li>Enfoque en desarrollo de MVPs</li>
+                        <li>Coordinación de equipos</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 pb-2 border-b"><i class="fas fa-tools icon"></i> Habilidades Técnicas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">Lenguajes y Tecnologías</h3>
+                    <ul class="text-gray-700">
+                        <li>HTML5 / CSS3 / JavaScript / TypeScript</li>
+                        <li>Node.js / Express</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">Frameworks/Librerías</h3>
+                    <ul class="text-gray-700">
+                        <li>Vue.js / React</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-lg font-semibold mb-2">Control de Versiones</h3>
+                    <ul class="text-gray-700">
+                        <li>Git</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-lg font-semibold mb-2">Herramientas</h3>
+                    <ul class="text-gray-700">
+                        <li>Visual Studio Code, Postman, DevTools, Figma, Docker (básico)</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-lg font-semibold mb-2">Plataformas</h3>
+                    <ul class="text-gray-700">
+                        <li>Moodle, WordPress, Joomla, LimeSurvey</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+         <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 pb-2 border-b"><i class="fas fa-users icon"></i> Habilidades Blandas (Soft Skills)</h2>
+            <ul class="text-gray-700">
+                <li>Comunicación efectiva</li>
+                <li>Pensamiento crítico</li>
+                <li>Resolución de problemas</li>
+                <li>Adaptabilidad</li>
+                <li>Trabajo en equipo</li>
+                <li>Mentoría y guía</li>
+            </ul>
+        </section>
+
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 pb-2 border-b"><i class="fas fa-chalkboard-teacher icon"></i> Enfoque Pedagógico</h2>
+            <ul class="text-gray-700">
+                <li>Aprendizaje Práctico: Orientado a proyectos reales que reflejen el mercado laboral.</li>
+                <li>Calidad y Detalle: Énfasis en código limpio, usabilidad y experiencia de usuario.</li>
+                <li>Mejora Continua: Fomento de la revisión rigurosa y la iteración.</li>
+                <li>Interdisciplinariedad: Integración de diseño, UX, marketing y gestión de proyectos.</li>
+                <li>Autonomía y Colaboración: Impulso del aprendizaje independiente y el trabajo en equipo.</li>
+                <li>Valores Éticos: Concienciación sobre responsabilidad digital y ética profesional.</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 pb-2 border-b"><i class="fas fa-graduation-cap icon"></i> Formación Académica</h2>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold">Licenciatura / Grado en Informática</h3>
+                <p class="italic mb-1">Universidad de Granada</p>
+                <p class="text-gray-600 text-sm">[Año de inicio] - [Año de finalización]</p>
+            </div>
+
+            <div class="mb-0">
+                <h3 class="text-xl font-semibold">Máster en Formación del Profesorado</h3>
+                <p class="italic mb-1">Universidad [Nombre de la Universidad]</p>
+                <p class="text-gray-600 text-sm">[Año de inicio] - [Año de finalización]</p>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4 pb-2 border-b"><i class="fas fa-language icon"></i> Idiomas</h2>
+            <ul class="text-gray-700">
+                <li>Español: Nativo</li>
+                <li>Inglés: B1</li>
+                <li>[Otros idiomas si aplica y nivel]</li>
+            </ul>
+        </section>
+
+        <section class="mb-0">
+            <h2 class="text-2xl font-semibold mb-4 pb-2 border-b"><i class="fas fa-heart icon"></i> Intereses</h2>
+            <p class="text-gray-700">
+                Fuera del aula, disfruto de la fotografía, el diseño gráfico y la exploración de nuevas tecnologías. Siempre estoy buscando formas de integrar mis pasiones en mi enseñanza, creando un ambiente dinámico y atractivo para mis estudiantes.
+            </p>
+        </section>
+
+    </div>
+
+</body>
+</html>
